@@ -8,12 +8,17 @@ form.addEventListener('submit', (e) => {
 
     if(emailValue === '') {
         email.classList.add('email-error')
+        email.value = ''
+        email.placeholder = 'Please enter a valid email address'
         } else if(!isEmail(emailValue)) {
             email.classList.add('email-error');
+            email.value = ''
+            email.placeholder = 'Please enter a valid email address'
         } else {
             alert('Success!');
             email.value = '';
             email.className = "email"
+            email.placeholder = "Your email address..."
         }
 });
 
